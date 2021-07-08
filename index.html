@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
-  <link rel='stylesheet' href='/dist/style.css'>
+  <link rel='stylesheet' type="text/css" href="client/dist/css/style.min.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -18,7 +18,21 @@
   </style>
 </head>
 <body>
-  About
+
+  <header class='header'>
+    <nav class='flex flex-jc-sb flex-ai-c'>
+      <a href='/' class='header__logo'>
+        <img src='images/logo.svg' alt='sunnyside' />
+      </a>
+
+      <a href='#' class='header__menu'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </nav>
+  </header>
+  <!-- About
   Services
   Projects
   Contact
@@ -66,7 +80,7 @@
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Andrew Huang</a>.
-  </div>
+  </div> -->
 
   <script src='/app/js/script.js'></script>
 </body>
