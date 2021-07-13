@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Fraunces&display=swap" rel="stylesheet">
   <link rel='stylesheet' type="text/css" href="client/dist/css/style.min.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
@@ -25,11 +25,22 @@
         <img src='images/logo.svg' alt='sunnyside' />
       </a>
 
-      <a href='#' class='header__menu'>
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
+      <div class='header__cta flex flex-jc-c flex-ai-c'>
+        <div class='header__links hide-for-mobile'>
+          <a href="#" class='header__font-B'>About</a>
+          <a href="#" class='header__font-B'>Services</a>
+          <a href="#" class='header__font-B'>Projects</a>
+          <a type='#' class='header__font-F header__contact'>CONTACT</a>
+        </div>
+
+        <a href='#' class='header__menu hide-for-desktop'>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        
+
+      </div>
     </nav>
   </header>
   <!-- About
