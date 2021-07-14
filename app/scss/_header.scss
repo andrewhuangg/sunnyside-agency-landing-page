@@ -1,10 +1,25 @@
 .header {
   background-color: $brightBlue;
 
+  &.open {
+    .header__toggle {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
   nav {
+    display: flex;
+    position: relative;
     padding: 1.5rem;
     padding-top: 1.75rem;
-    display: flex;
   }
 
   &__logo {
@@ -15,14 +30,16 @@
   &__cta {
   }
 
-  &__menu {
-    //mobile-menu
+  &__toggle {
+    //toggle menu
 
     > span {
       display: block;
       width: 1.625rem;
       height: 0.125rem;
       background-color: $white;
+      transition: all 300ms ease-in-out;
+      transform-origin: 2px 1px;
 
       &:not(:last-child) {
         margin-bottom: 0.38rem;
@@ -71,6 +88,41 @@
     &:hover {
       background-color: hsl(200, 98%, 70%);
       color: white;
+    }
+  }
+
+  &__menu {
+    flex-flow: column nowrap;
+    padding: 1.5rem;
+    position: absolute;
+    margin-top: 2rem;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    /*
+      need to figure out angle for menu
+      border-top: 1.5rem solid transparent;
+      border-right: 25px solid white;
+    */
+
+    a {
+      display: block;
+      text-align: center;
+
+      &:not(:last-child) {
+        padding: 1rem 5rem;
+        color: $darkGrayishBlue;
+        font-size: $font-med;
+        font-weight: 600;
+      }
+
+      &:last-child {
+        background-color: $yellow;
+        padding: 1rem;
+        margin: 0.75rem 0;
+        width: 8rem;
+      }
     }
   }
 }
